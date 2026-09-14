@@ -18,6 +18,7 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
+    - alsa-lib  # [linux]
   host:
     - python
     - portaudio
