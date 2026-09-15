@@ -12,17 +12,17 @@ source:
     - 0003-Add-MSVC-support.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - {{ cdt('alsa-lib-devel') }}  # [linux]
-    - patch                        # [not win]
-    - m2-patch                     # [win]
+    - alsa-lib  # [linux]
   host:
     - python
     - portaudio
+    - setuptools
   run:
     - python
     - portaudio
